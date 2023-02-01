@@ -11,6 +11,7 @@ const mobileMenu = () => {
 const closeMenuOnClick = () => {
   menu.classList.remove('is-active')
   menuLinks.classList.remove('navbar__menu-active')
+  body.classList.remove('active')
 }
 
 menu.addEventListener('click', mobileMenu)
@@ -30,7 +31,7 @@ menuLinks.addEventListener('click', function (event) {
   if (event.target.closest('.link-1')) {
     const services = document.querySelector('.services')
     services.scrollIntoView({
-      block: 'center',
+      block: 'start',
       inline: 'nearest',
       behavior: 'smooth',
     })
@@ -60,7 +61,7 @@ gsap.registerPlugin(ScrollTrigger)
 gsap.from('.animate-hero', {
   duration: 0.6,
   opacity: 0,
-  y: -150,
+  y: -270,
   stagger: 0.3,
 })
 
@@ -83,8 +84,8 @@ gsap.from('.animate-img', {
 gsap.from('.animate-membership', {
   scrollTrigger: '.animate-membership',
   duration: 1,
-  opacity: 1,
-  y: -150,
+  opacity: 0,
+  y: -350,
   stagger: 0.3,
   delay: 0.5,
 })
