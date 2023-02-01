@@ -1,0 +1,29 @@
+// Colors:
+
+$red-color: #f9032f;
+$black-color: #000;
+$white-color: #fff;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+// Extends
+
+%red-button {
+  padding: 1rem 3rem;
+  border: none;
+  background-color: $red-color;
+  color: $white-color;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease-out;
+  border-radius: 4px;
+  &:hover {
+    background-color: $black-color;
+  }
+}
+
+// Membership
+
